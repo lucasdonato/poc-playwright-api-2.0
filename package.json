@@ -12,6 +12,7 @@
   "devDependencies": {
     "@playwright/test": "^1.23.1",
     "dotenv": "^16.0.1",
-    "faker-br": "^0.4.1"
+    "faker-br": "^0.4.1",
+    "mysql2": "^2.3.3"
   }
 }

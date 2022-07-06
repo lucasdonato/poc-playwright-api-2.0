@@ -1,6 +1,11 @@
 import { request } from '@playwright/test';
 
+const database = require('./support/database/functions')
+
 async function globalSetup() {
+
+    //await database.deleteFuncionarioLog()
+
     const requestContext = await request.newContext();
 
     let requestJWT =
