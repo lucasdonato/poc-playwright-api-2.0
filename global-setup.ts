@@ -6,8 +6,8 @@ async function globalSetup() {
     let requestJWT =
         await requestContext.post(`${process.env.URL}/login`, {
             data: {
-                username: 'admin',
-                password: '123456'
+                username: process.env.USUARIO,
+                password: process.env.SENHA
             }
         });
 
