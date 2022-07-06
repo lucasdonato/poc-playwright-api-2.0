@@ -5,6 +5,7 @@ const config: PlaywrightTestConfig = {
     globalSetup: require.resolve('./global-setup'),
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 1,
+    testDir: 'tests-api/',
     use: {
         screenshot: "only-on-failure",
         extraHTTPHeaders: {

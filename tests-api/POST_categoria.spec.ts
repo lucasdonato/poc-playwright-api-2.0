@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { categoria } from '../factories/categorias'
-import { requestCategoria } from '../requests/categoriaAPI'
+import { categoria } from '../support/factories/categorias'
+import { requestCategoria } from '../support/requests/categoriaAPI'
 
 test.describe.parallel('POST /categorias', () => {
     test('dados completos', async ({ request }) => {
