@@ -7,7 +7,7 @@ const config: PlaywrightTestConfig = {
     retries: process.env.CI ? 2 : 1,
     testDir: 'tests-api/',
     fullyParallel: true,
-    //workers: 1,
+    workers: 10,
     use: {
         screenshot: "only-on-failure",
         extraHTTPHeaders: {
