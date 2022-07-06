@@ -8,7 +8,7 @@ async function globalSetup() {
     const requestContext = await request.newContext();
 
     let requestJWT =
-        await requestContext.post(`${process.env.URL}/login`, {
+        await requestContext.post(`${process.env.URL_BASE}/login`, {
             data: {
                 username: process.env.USUARIO,
                 password: process.env.SENHA

@@ -11,7 +11,7 @@ const config: PlaywrightTestConfig = {
         extraHTTPHeaders: {
             'Authorization': `Bearer ${process.env.token}`
         },
-        baseURL: process.env.URL
+        baseURL: process.env.URL_BASE
     },
     projects: [
         {

@@ -1,8 +1,8 @@
 
 
-const endpoint = process.env.URL + '/categorias'
+const endpoint = process.env.URL_BASE + '/categorias'
 
-export class requestCategoria {
+export class reqCategoria {
 
     static async post(categoria: Object, request: any) {
 
