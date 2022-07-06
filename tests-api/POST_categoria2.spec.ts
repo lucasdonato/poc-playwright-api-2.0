@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { categoria } from '../support/factories/categorias'
 import { reqCategoria } from '../support/requests/categoriaAPI'
 
-test.describe.parallel('POST /categorias', () => {
+test.describe('POST /categorias', () => {
     test('dados completos', async ({ request }) => {
         const { body, status } = await reqCategoria.post(categoria, request);
 
