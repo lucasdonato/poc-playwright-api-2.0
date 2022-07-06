@@ -3,8 +3,7 @@ import { request } from '@playwright/test';
 const database = require('./support/database/functions')
 
 async function globalSetup() {
-
-    await database.deleteFuncionarioLog()
+    //await database.dropDatabase()
 
     const requestContext = await request.newContext();
 
