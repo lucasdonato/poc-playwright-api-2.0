@@ -1,0 +1,17 @@
+{
+  "name": "poc-playwright-api-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.23.1",
+    "dotenv": "^16.0.1",
+    "faker-br": "^0.4.1"
+  }
+}
