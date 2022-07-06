@@ -4,7 +4,7 @@ const database = require('./support/database/functions')
 
 async function globalSetup() {
 
-    //await database.deleteFuncionarioLog()
+    await database.deleteFuncionarioLog()
 
     const requestContext = await request.newContext();
 

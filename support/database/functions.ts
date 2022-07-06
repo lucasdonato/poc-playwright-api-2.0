@@ -1,22 +1,19 @@
 const mysql = require('mysql2');
 
 const pool = mysql.createPool({
-    host: 'app-db.cavalo.q4dev.com.br',
-    user: 'admin',
-    password: '123456',
-    database: 'cavalo_tagplus',
-    port: '3306',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password:process.env.DB_PASS,
+    database: process.env.DATABASE,
+    port: process.env.DB_PORT,
     connectionLimit: 10,
     queueLimit: 0
 });
 
 
 async function executeQuery(sql: string) {
-    try {
-        pool.query(sql)
-    } catch (error) {
-        throw error
-    }
+    try { pool.query(sql) }
+    catch (error) { throw error }
 }
 
 export async function deleteFuncionarioLog() {
