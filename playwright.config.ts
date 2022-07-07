@@ -2,7 +2,10 @@ import { type PlaywrightTestConfig, devices } from '@playwright/test';
 require('dotenv').config()
 
 const config: PlaywrightTestConfig = {
-    reporter: [['html', { outputFolder: 'reports' }]],
+    reporter: [
+        ['list'],
+        ['html', { outputFolder: 'reports' }]
+    ],
     globalSetup: require.resolve('./global-setup'),
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 1,
