@@ -14,7 +14,7 @@ jobs:
         run: |
           echo '${{ secrets.ENV_PROD }}' > .env
       - name: Install dependencies and run tests
-        run: yarn install && yarn test
+        run: yarn install && yarn test:parallel
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v2
