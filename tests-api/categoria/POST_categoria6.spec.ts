@@ -5,6 +5,7 @@ import { reqCategoria } from '../../support/requests/categoriaAPI'
 test.describe('POST /categorias', () => {
     test('dados completos', async ({ request }) => {
         const { body, status } = await reqCategoria.post(categoria, request);
+
         expect(status).toBe(201)
         expect(body.descricao).toBe(categoria.descricao)
         expect(body.tipo).toBe(categoria.tipo)

@@ -11,7 +11,7 @@ const config: PlaywrightTestConfig = {
     retries: process.env.CI ? 2 : 0,
     testDir: 'tests-api/',
     fullyParallel: true,
-    workers: 10,
+    workers: 1,
     use: {
         trace: "on-first-retry",
         screenshot: "only-on-failure",

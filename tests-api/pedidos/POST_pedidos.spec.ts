@@ -14,15 +14,3 @@ test.describe('POST /pedidos', () => {
         expect(status).toBe(201)
     });
 })
-test.describe('POST /pedidos 2', () => {
-    test('dados completos', async ({ request }) => {
-        const { status } = await reqPedidos.post(pedido, request);
-        expect(status).toBe(201)
-    });
-})
-test.describe('POST /pedidos 3', () => {
-    test('dados completos', async ({ request }) => {
-        const { status } = await reqPedidos.post(pedido, request);
-        expect(status).toBe(201)
-    });
-})
