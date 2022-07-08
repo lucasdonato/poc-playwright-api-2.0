@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { categoria } from '../support/factories/categorias'
-import { reqCategoria } from '../support/requests/categoriaAPI'
+import { categoria } from '../../support/factories/categorias'
+import { reqCategoria } from '../../support/requests/categoriaAPI'
 
 test.describe('POST /categorias', () => {
     test('dados completos', async ({ request }) => {

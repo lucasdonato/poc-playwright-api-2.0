@@ -8,11 +8,12 @@ const config: PlaywrightTestConfig = {
     ],
     globalSetup: require.resolve('./global-setup'),
     forbidOnly: !!process.env.CI,
-    retries: process.env.CI ? 2 : 1,
+    retries: process.env.CI ? 2 : 0,
     testDir: 'tests-api/',
     fullyParallel: true,
     workers: 10,
     use: {
+        trace: "on-first-retry",
         screenshot: "only-on-failure",
         extraHTTPHeaders: {
             'Authorization': `Bearer ${process.env.token}`
