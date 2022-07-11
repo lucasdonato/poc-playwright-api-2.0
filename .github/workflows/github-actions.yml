@@ -13,8 +13,12 @@ jobs:
       - name: Write the .env file 📝
         run: |
           echo '${{ secrets.ENV_PROD }}' > .env
-      - name: Install dependencies and run tests
-        run: yarn install && yarn test:parallel
+      - name: 'Install dependencies'
+        run: |
+          - apt install mariadb-client-core-10.3 -y
+          - yarn install
+      - name: Run API tests
+        run:  yarn test:parallel
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v2
