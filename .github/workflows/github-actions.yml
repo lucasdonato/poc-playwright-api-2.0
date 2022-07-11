@@ -22,7 +22,7 @@ jobs:
         run: | 
           yarn install
       - name: Run API tests
-        run:  yarn test:parallel
+        run:  NODE_ENV=production yarn test:parallel
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v2
