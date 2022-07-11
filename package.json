@@ -1,7 +1,7 @@
 {
   "name": "poc-playwright-api-",
   "version": "1.0.0",
-  "description": "",
+  "description": "POC playwright - Testes API",
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test  --workers=1",
