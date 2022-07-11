@@ -19,7 +19,9 @@ jobs:
         run: |
           echo '${{ secrets.ENV_PROD }}' > .env
       - name: 'Install dependencies'
-        run:  yarn install
+        run: | 
+          sudo apt install mariadb-client-core-10.3 -y
+          yarn install
       - name: Run API tests
         run:  yarn test:parallel
       - name: Upload test results
