@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - test
+      - main
 jobs:
   api-tests:
     runs-on: ubuntu-latest
