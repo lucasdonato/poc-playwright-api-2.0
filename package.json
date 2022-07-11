@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test  --workers=1",
-    "test:parallel": "npx playwright test --workers=10",
+    "test:parallel": "npx playwright test --workers=5",
     "report": "npx playwright show-report reports"
   },
   "keywords": [],
