@@ -16,7 +16,7 @@ jobs:
       - name: 'Install dependencies'
         run: |
            sudo apt install mariadb-client-core-10.3 -y
-           yarn install
+           sudo yarn install
       - name: Run API tests
         run:  yarn test:parallel
       - name: Upload test results
